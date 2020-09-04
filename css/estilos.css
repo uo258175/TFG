@@ -1,0 +1,142 @@
+body, html{
+    width: 100vw;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+nav, footer{
+    width: 100vw;
+}
+
+
+nav{
+    font-weight: 800;
+}
+
+.navbar-brand{
+   font-weight: normal;
+}
+
+.page-title{
+    background-color: lightgray;
+    align-items: center;
+    text-align: center;
+}
+
+.container-fluid{
+	height:100%;
+}
+
+.zig-zag{
+    background-image:url('https://www.transparenttextures.com/patterns/zig-zag.png');
+}
+
+.accordion{
+    height: 100%;
+}
+
+footer{
+    color: white;
+     margin: 0;
+    max-width: 100%;
+   height: auto;
+}
+
+.title{
+    font-size: 8vw;
+}
+
+h3, button, #return{
+    font-size: 45px;
+}
+
+
+.page-content{
+    height: 90%;
+    text-align: center;
+}
+
+.content{
+    position: relative;
+    top: 50%;
+}
+
+
+#mapa{
+    height: 480px;
+    width: 95%;
+    margin: auto;
+}
+
+#my-video{
+    margin: auto;
+}
+
+
+#return{
+    background-color: lightgray;
+}
+
+table{
+    margin: auto;
+    height: 100%;
+    font-size: 15px;
+}
+
+#tabla{
+    background-color: navajowhite;
+}
+
+
+td {
+  border: 1px solid black;
+  vertical-align: middle!important;
+}
+
+th, thead{
+  border: 3px solid black;
+}
+
+.tabla-admin{
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.col-6{
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.margin-15{
+    margin-top: 15px;
+}
+
+input{
+    font-size:15px;
+    width: 100%;
+    height: 100%;
+}
+
+.form-control{
+    font-size: 4vw;
+}
+
+#not-logged{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+}
+
+#logged{
+    display: none;
+}
+
+.collapsed{
+    font-size: 25px;
+}

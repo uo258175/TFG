@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="device-width, initial-scale=1, user-scalable=yes">
+<title>Administracion</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="css/estilos.css" type="text/css">
+    <link rel="icon" type="image/png" href="dron.png">
+    
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    
+    <!-- Friconix -->
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+    
+    <!-- Animated CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" type="text/css">
+    
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation|shadow-multiple|3d">
+</head>
+<body>
+        <nav class="navbar navbar-dark bg-dark navbar-expand-md bg-faded justify-content-center font-effect-fire-animation">
+            <a href="index.html" class="navbar-brand d-flex w-50 mr-auto">Drones</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html"><i class="fi-xnsuxl-videocamera-solid fi-2x"></i></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html"><i class="fi-xnsuxl-users-cog fi-2x"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fi-snsuxl-linkedin fi-2x"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="info.html"><i class="fi-ctluxl-question-mark fi-2x"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+<div class="container-fluid">
+    <div class="row justify-content-center page-title">
+        <h1 class="animate__animated animate__zoomInDown font-effect-shadow-multiple title">ADMINISTRACION USUARIOS</h1>
+    </div>
+    <div class="zig-zag" style="background-color: navajowhite; height: 100%;">
+    <div class="animate__animated animate__fadeInUp" id="not-logged">
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Introduce correo">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="Login()" style="font-size: 50px;"><i class="fi-xwsuxl-sign-in-solid"></i> Entrar</button>
+        </form>
+    </div>
+    
+    <div id="logged">
+                    <div class="row justify-content-center">
+        <div class="col-6 justify-content-center margin-15">
+            <h2>Bienvenido, </h2><h6 id="username"></h6>
+        </div>
+        <div class="col-6 justify-content-center margin-15">
+            <button class="btn btn-primary" onclick="Salir()"><i class="fi-xnsuxl-sign-out-solid"></i> Cerrar Sesion</button>
+        </div>
+    </div>
+        <div class="row justify-content-center tabla-admin table-responsive">
+            <table class="table animate__animated animate__fadeInUp">
+                  <thead>
+                    <tr>
+                      <th scope="col"><i class="fi-xwluxl-address-card-solid"></i>Nombre</th>
+                      <th scope="col"><i class="fi-xwluxl-address-card-solid"></i>Apellido</th>
+                      <th scope="col"><i class="fi-xnsuxl-close-envelope-solid"></i>Email</th>
+                      <th scope="col"><i class="fi-xnsuxl-key-alt-solid"></i>Nueva Contraseña</th>
+                      <th scope="col"><i class="fi-xnsuxl-key-alt-solid"></i>Repetir Contraseña</th>
+                      <th scope="col"><i class="fi-xwsuxl-pen"></i>Editar/Borrar</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabla-users">
+                  </tbody>
+            </table>
+        </div>
+    
+        <div class="row justify-content-center margin-15 tabla-admin table-responsive">
+                <table class="table animate__animated animate__fadeInUp">
+                  <thead>
+                    <tr>
+                      <th scope="col"><i class="fi-xwluxl-address-card-solid"></i>Nombre</th>
+                      <th scope="col"><i class="fi-xwluxl-address-card-solid"></i>Apellido</th>
+                      <th scope="col"><i class="fi-xnsuxl-close-envelope-solid"></i>Email</th>
+                      <th scope="col"><i class="fi-xnsuxl-key-alt-solid"></i>Contraseña</th>
+                      <th scope="col"><i class="fi-xnsuxl-key-alt-solid"></i>Repetir Contraseña</th>
+                      <th scope="col"><i class="fi-xwsuxl-pen"></i>Crear nuevo usuario</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabla-new">
+                    <tr>
+                      <td><input type="text" id="name" placeholder="Introduce nombre"></td>
+                      <td><input type="text" id="surname" placeholder="Apellido"></td>
+                      <td><input type="email" id="newemail" placeholder="Email"></td>
+                      <td><input type="password" id="newpassword" placeholder="Contraseña"></td>
+                      <td><input type="password" id="rep-password" placeholder="Repetir ontraseña"></td>
+                      <td><button class="btn btn-primary" onclick="Post()"><i class="fi-cwsuxl-plus-solid"></i></button></td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+    </div>
+        </div>
+        <!-- Footer -->
+<footer class="bg-dark">
+    
+    <div class="row py-1">
+        <div class="col-6"><a href="#"><i class="fi-snsuxl-linkedin fi-2x"></i></a></div>
+        <div class="col-6"><a href="info.html"><i class="fi-ctluxl-question-mark fi-2x"></i></a></div>
+    </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-1">© 2020 Copyright:
+    <p>Álvaro de la Rosa Mora</p>
+<p><a href="tecnologias.html">Tecnologías empleadas</a></p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</div>
+    <script src="admin-user.js"></script>
+    
+</body>
+</html>
