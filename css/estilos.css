@@ -140,3 +140,12 @@ input{
 .collapsed{
     font-size: 25px;
 }
+
+.nav-item:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+
+.nav-item:hover i{
+    color: black;
+}
