@@ -149,3 +149,7 @@ input{
 .nav-item:hover i{
     color: black;
 }
+
+nav li{
+    text-align: center;
+}
